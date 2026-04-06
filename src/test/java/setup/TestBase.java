@@ -8,6 +8,7 @@
 
   import com.codeborne.selenide.Configuration;
   import com.codeborne.selenide.TextCheck;
+  import io.github.bonigarcia.wdm.WebDriverManager;
   import org.junit.jupiter.api.AfterAll;
   import org.junit.jupiter.api.BeforeAll;
   import org.openqa.selenium.chrome.ChromeOptions;
@@ -20,8 +21,15 @@
 
     @BeforeAll
     public static void setup() {
+      WebDriverManager.chromedriver().setup();
+
       ChromeOptions options = new ChromeOptions();
-      options.addArguments("--remote-allow-origins=*");
+      options.addArguments(
+        "--headless=new",
+        "--no-sandbox",
+        "--disable-dev-shm-usage",
+        "--remote-allow-origins=*"
+      );
 
       Configuration.browser = "chrome";
       Configuration.headless = true;
@@ -35,5 +43,6 @@
     public static void tearDown() {
       closeWebDriver();
     }
+
   }
 
