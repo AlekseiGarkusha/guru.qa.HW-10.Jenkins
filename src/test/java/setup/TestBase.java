@@ -24,7 +24,7 @@
       options.addArguments("--remote-allow-origins=*");
 
       Configuration.browser = "chrome";
-//      Configuration.headless = false;
+      Configuration.headless = true;
 //      Configuration.holdBrowserOpen = true;
       Configuration.reportsFolder = "target/selenide-reports";
       Configuration.timeout = 5000;
