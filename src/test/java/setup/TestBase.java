@@ -26,12 +26,9 @@
       Configuration.browser = "chrome";
       Configuration.headless = true;
 //      Configuration.holdBrowserOpen = true;
-      Configuration.reportsFolder = "target/selenide-reports";
       Configuration.timeout = 5000;
-      Configuration.textCheck = TextCheck.FULL_TEXT;
       Configuration.browserCapabilities = options;
       Configuration.browserSize = "1920x1080";
-      Configuration.baseUrl = "https://demoqa.com";
     }
 
     @AfterAll
