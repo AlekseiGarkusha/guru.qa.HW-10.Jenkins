@@ -19,58 +19,27 @@
   import static com.codeborne.selenide.Selenide.closeWebDriver;
 
   public class TestBase {
-
     @BeforeAll
     public static void setup() {
-      try {
-        // Автоматически загружаем совместимую версию ChromeDriver
-        WebDriverManager.chromedriver().forceDownload().create();
 
-        ChromeOptions options = new ChromeOptions();
+      ChromeOptions options = new ChromeOptions();
+      options.addArguments(
+        "--no-sandbox",
+        "--disable-dev-shm-usage"
+      );
 
-        // Настройки для CI/Jenkins
-        options.addArguments(
-          "--headless=new",
-          "--no-sandbox",
-          "--disable-dev-shm-usage",
-          "--disable-gpu",
-          "--window-size=1920,1080",
-          "--remote-allow-origins=*"
-        );
+      Configuration.remote = "https://selenoid.autotests.cloud/wd/hub";
+      Configuration.browser = "chrome";
+      Configuration.browserVersion = "120.0";
 
-        // Конфигурация Selenide
-        Configuration.browser = "chrome";
-        Configuration.headless = true; // Включаем headless-режим
-        Configuration.timeout = 15000; // Увеличиваем таймаут
-        Configuration.pageLoadTimeout = 30000;
-        Configuration.holdBrowserOpen = false;
-        Configuration.screenshots = true;
-        Configuration.savePageSource = true;
-        Configuration.browserCapabilities = options;
-        Configuration.browserSize = "1920x1080";
-
-      } catch (WebDriverException e) {
-        System.err.println("Ошибка инициализации WebDriver: " + e.getMessage());
-        throw e;
-      } catch (Exception e) {
-        System.err.println("Критическая ошибка при настройке тестов: " + e.getMessage());
-        throw new RuntimeException("Не удалось инициализировать WebDriver", e);
-      }
-    }
-
-    @BeforeEach
-    public void logger() {
-      SelenideLogger.addListener("allure", new AllureSelenide());
+      Configuration.browserCapabilities = options;
+      Configuration.browserSize = "1920x1080";
+      Configuration.timeout = 10000;
     }
 
     @AfterAll
     public static void tearDown() {
-      try {
-        closeWebDriver();
-        System.out.println("WebDriver корректно закрыт");
-      } catch (Exception e) {
-        System.err.println("Ошибка при закрытии WebDriver: " + e.getMessage());
-      }
+      closeWebDriver();
     }
   }
 
