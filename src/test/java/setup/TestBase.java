@@ -19,15 +19,22 @@
   public class TestBase {
 
     @BeforeAll
-    public static void setup() {Ф
+    public static void setup() {
       ChromeOptions options = new ChromeOptions();
       options.addArguments("--remote-allow-origins=*");
 
-      Configuration.browser = "chrome";
-      Configuration.reportsFolder = "target/selenide-reports";
+      String remote = System.getProperty("selenide.remote");
+
+      Configuration.browser = System.getProperty("browser", "chrome");
+      Configuration.browserSize = System.getProperty("resolution", "1920x1080");
       Configuration.timeout = 5000;
-      Configuration.browserCapabilities = options;
-      Configuration.browserSize = "1920x1080";
+
+      if (remote != null) {
+        Configuration.remote = remote;
+        Configuration.browserCapabilities = options;
+      } else {
+        Configuration.browserCapabilities = options;
+      }
     }
 
     @BeforeEach
