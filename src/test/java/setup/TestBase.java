@@ -28,7 +28,7 @@
       Configuration.browser = System.getProperty("browser", "chrome");
       Configuration.browserSize = System.getProperty("resolution", "1920x1080");
       Configuration.timeout = 5000;
-      Configuration.reportsFolder = "target/selenide-reports";
+//      Configuration.reportsFolder = "target/selenide-reports";
 
       if (remote != null) {
         Configuration.remote = remote;
