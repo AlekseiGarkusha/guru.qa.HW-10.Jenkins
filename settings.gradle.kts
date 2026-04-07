@@ -1,1 +1,0 @@
-rootProject.name = "guru.qa.HW-10.Jenkins"
