@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.SelenideTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-04-07T19:59:34.645Z" hostname="DESKTOP-A8CGM4F" time="23.03">
+  <properties/>
+  <testcase name="Создание Issue для автоматизированного пользователя" classname="tests.SelenideTest" time="23.03"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[апр. 07, 2026 10:59:37 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 146, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 146
+]]></system-err>
+</testsuite>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.simple.PositiveTests" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-04-07T20:00:11.409Z" hostname="DESKTOP-A8CGM4F" time="0.068">
+  <properties/>
+  <testcase name="someTest1()" classname="tests.simple.PositiveTests" time="0.001"/>
+  <testcase name="someTest2()" classname="tests.simple.PositiveTests" time="0.001"/>
+  <testcase name="someTest3()" classname="tests.simple.PositiveTests" time="0.001"/>
+  <testcase name="someTest4()" classname="tests.simple.PositiveTests" time="0.001"/>
+  <testcase name="someTest5()" classname="tests.simple.PositiveTests" time="0.0"/>
+  <testcase name="someTest6()" classname="tests.simple.PositiveTests" time="0.001"/>
+  <testcase name="someTest7()" classname="tests.simple.PositiveTests" time="0.001"/>
+  <testcase name="someTest8()" classname="tests.simple.PositiveTests" time="0.001"/>
+  <testcase name="someTest9()" classname="tests.simple.PositiveTests" time="0.001"/>
+  <testcase name="someTest()" classname="tests.simple.PositiveTests" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

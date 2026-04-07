@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.simple.SkippedTests" tests="2" skipped="2" failures="0" errors="0" timestamp="2026-04-07T20:00:11.488Z" hostname="DESKTOP-A8CGM4F" time="0.006">
+  <properties/>
+  <testcase name="someTest1()" classname="tests.simple.SkippedTests" time="0.002">
+    <skipped/>
+  </testcase>
+  <testcase name="someTest()" classname="tests.simple.SkippedTests" time="0.0">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
