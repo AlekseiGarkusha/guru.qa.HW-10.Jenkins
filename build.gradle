@@ -1,10 +1,11 @@
 plugins {
-  id 'java'
-  id 'io.qameta.allure' version '3.0.2'
+  id 'java-library'
+  id 'io.qameta.allure' version '2.12.0'
 }
 
-group = 'org.example'
-version = '1.0-SNAPSHOT'
+repositories {
+  mavenCentral()
+}
 
 allure {
   report {
@@ -20,36 +21,19 @@ allure {
   }
 }
 
-repositories {
-  mavenCentral()
-}
-
 dependencies {
-  testImplementation("org.junit.jupiter:junit-jupiter:5.10.2")
-  testImplementation("io.qameta.allure:allure-junit5:2.20.0")
-  implementation("com.codeborne:selenide:7.15.0")
-  implementation("io.qameta.allure:allure-selenide:2.33.0")
-
-  implementation("io.github.bonigarcia:webdrivermanager:6.3.4")
-
+  testImplementation(
+    "org.junit.jupiter:junit-jupiter:5.10.0"
+  )
 }
 
-tasks.register('smoke', Test) {
-  useJUnitPlatform {
-    includeTags("smoke")
-  }
+tasks.withType(Test) {
+  useJUnitPlatform()
 
   testLogging {
-    events "passed", "skipped", "failed", "standardOut", "standardError"
-    exceptionFormat "full"
+    lifecycle {
+      events "started", "skipped", "failed", "standard_error", "standard_out"
+      exceptionFormat "short"
+    }
   }
-
-  shouldRunAfter test
 }
-
-test {
-  useJUnitPlatform()
-  systemProperties(System.getProperties())
-}
-
-
