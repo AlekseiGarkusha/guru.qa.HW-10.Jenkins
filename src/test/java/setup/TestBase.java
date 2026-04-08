@@ -32,6 +32,8 @@
       if (remote != null) {
         Configuration.remote = remote;
         Configuration.browserCapabilities = options;
+        Configuration.reportsFolder = "target/selenide-reports";
+
       } else {
         Configuration.browserCapabilities = options;
       }
