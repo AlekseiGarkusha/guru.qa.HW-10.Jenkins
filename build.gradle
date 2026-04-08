@@ -23,7 +23,7 @@ allure {
 
 dependencies {
   testImplementation("org.junit.jupiter:junit-jupiter:5.10.0")
-    testImplementation("io.qameta.allure:allure-junit5:2.20.0")
+  testImplementation("io.qameta.allure:allure-junit5:2.33.0")
     implementation("com.codeborne:selenide:7.15.0")
     implementation("io.qameta.allure:allure-selenide:2.33.0")
 }
