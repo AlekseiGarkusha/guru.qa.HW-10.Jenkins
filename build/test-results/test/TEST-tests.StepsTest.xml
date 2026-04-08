@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.StepsTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-04-07T20:00:02.273Z" hostname="DESKTOP-A8CGM4F" time="9.008">
+<testsuite name="tests.StepsTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-04-08T14:11:52.896Z" hostname="DESKTOP-A8CGM4F" time="4.048">
   <properties/>
-  <testcase name="testAnnotatedStep()" classname="tests.StepsTest" time="3.897"/>
-  <testcase name="Создание Issue для автоматизированного пользователя" classname="tests.StepsTest" time="5.101"/>
+  <testcase name="testAnnotatedStep()" classname="tests.StepsTest" time="2.208"/>
+  <testcase name="Создание Issue для автоматизированного пользователя" classname="tests.StepsTest" time="1.829"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

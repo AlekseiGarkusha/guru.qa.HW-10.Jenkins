@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.simple.SkippedTests" tests="2" skipped="2" failures="0" errors="0" timestamp="2026-04-07T20:00:11.488Z" hostname="DESKTOP-A8CGM4F" time="0.006">
+<testsuite name="tests.simple.SkippedTests" tests="2" skipped="2" failures="0" errors="0" timestamp="2026-04-08T14:11:57.242Z" hostname="DESKTOP-A8CGM4F" time="0.01">
   <properties/>
-  <testcase name="someTest1()" classname="tests.simple.SkippedTests" time="0.002">
+  <testcase name="someTest1()" classname="tests.simple.SkippedTests" time="0.003">
     <skipped/>
   </testcase>
   <testcase name="someTest()" classname="tests.simple.SkippedTests" time="0.0">
